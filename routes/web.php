@@ -14,8 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('client.landing');
 });
+// Route::get('/jelas', function () {
+//     return view('client.naskah');
+// });
 
 Auth::routes();
 
@@ -33,4 +36,8 @@ Route::group(['prefix' => 'Admin','namespace'=>'Admin','middleware'=>['auth','is
         Route::put('/update/{id}', 'UserController@update')->name('publish.update');
         Route::delete('/delete/{id}', 'UserController@destroy')->name('publish.delete');
     });
+});
+
+Route::group(['namespace'=>'Client'], function () {
+    Route::get('/naskah', 'HomeController@index')->name('homes.index');
 });

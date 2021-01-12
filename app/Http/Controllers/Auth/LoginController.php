@@ -21,7 +21,9 @@ class LoginController extends Controller
     |
     */
 
-    use AuthenticatesUsers;
+   use AuthenticatesUsers {
+        attemptLogin as attemptLoginAtAuthenticatesUsers;
+    }
 
     /**
      * Where to redirect users after login.
@@ -44,6 +46,8 @@ class LoginController extends Controller
     {
         if($user->role->name!='Publish'&&$user->role->name!='User'){
             return redirect('/Admin');
+        }else{
+            return redirect('/naskah');
         }
     }
 }

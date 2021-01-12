@@ -12,16 +12,16 @@
                         href="{{route('publish.index')}}" aria-expanded="false">
                         <i class="fa fa-user" aria-hidden="true"></i><span class="hide-menu">Publish</span></a>
                 </li>
-                {{-- <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                         href="basic-table.html" aria-expanded="false"><i class="fa fa-table"
-                            aria-hidden="true"></i><span class="hide-menu">Table</span></a></li>
+                            aria-hidden="true"></i><span class="hide-menu">Script konfirmasi</span></a></li>
                 <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                         href="fontawesome.html" aria-expanded="false"><i class="fa fa-font"
-                            aria-hidden="true"></i><span class="hide-menu">Icon</span></a></li>
+                            aria-hidden="true"></i><span class="hide-menu">Script di Terima</span></a></li>
                 <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                         href="map-google.html" aria-expanded="false"><i class="fa fa-globe"
-                            aria-hidden="true"></i><span class="hide-menu">Google Map</span></a></li>
-                <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                            aria-hidden="true"></i><span class="hide-menu">Script di Tolak</span></a></li>
+                {{-- <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                         href="blank.html" aria-expanded="false"><i class="fa fa-columns"
                             aria-hidden="true"></i><span class="hide-menu">Blank</span></a></li> --}}
                 {{-- <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"

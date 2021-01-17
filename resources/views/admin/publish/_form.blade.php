@@ -37,8 +37,8 @@
                 <div class="col-md-12 border-bottom p-0">
                     <textarea rows="5" class="form-control p-0 border-0"></textarea>
                 </div>
-            </div>
-            <div class="form-group mb-4">
+            </div>--}}
+            {{-- <div class="form-group mb-4">
                 <label class="col-sm-12">Select Country</label>
                 <div class="col-sm-12 border-bottom">
                     <select class="form-control p-0 border-0">
@@ -49,7 +49,7 @@
                         <option>Thailand</option>
                     </select>
                 </div>
-            </div> --}}
+            </div>  --}}
             <div class="form-group mb-4">
                 <div class="col-sm-12">
                     <button class="btn btn-success">Update Profile</button>

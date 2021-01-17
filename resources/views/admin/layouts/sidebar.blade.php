@@ -8,18 +8,24 @@
                 <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                         href="{{route('home.index')}}" aria-expanded="false"><i class="fas fa-clock fa-fw"
                             aria-hidden="true"></i><span class="hide-menu">Dashboard</span></a></li>
+                @if (Auth::user()->role_id == 1)
                 <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                        href="{{route('publish.index')}}" aria-expanded="false">
-                        <i class="fa fa-user" aria-hidden="true"></i><span class="hide-menu">Publish</span></a>
+                    href="{{route('publish.index')}}" aria-expanded="false">
+                    <i class="fa fa-user" aria-hidden="true"></i><span class="hide-menu">Publish</span></a>
+                </li>
+                @endif
+                <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                        href="{{route('cate.index')}}" aria-expanded="false">
+                        <i class="fa fa-user" aria-hidden="true"></i><span class="hide-menu">Category</span></a>
                 </li>
                 <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                        href="basic-table.html" aria-expanded="false"><i class="fa fa-table"
+                        href="{{route('nas.index')}}" aria-expanded="false"><i class="fa fa-table"
                             aria-hidden="true"></i><span class="hide-menu">Script konfirmasi</span></a></li>
                 <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                        href="fontawesome.html" aria-expanded="false"><i class="fa fa-font"
+                        href="{{route('home.terima')}}" aria-expanded="false"><i class="fa fa-font"
                             aria-hidden="true"></i><span class="hide-menu">Script di Terima</span></a></li>
                 <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                        href="map-google.html" aria-expanded="false"><i class="fa fa-globe"
+                        href="{{route('home.tolak')}}" aria-expanded="false"><i class="fa fa-globe"
                             aria-hidden="true"></i><span class="hide-menu">Script di Tolak</span></a></li>
                 {{-- <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                         href="blank.html" aria-expanded="false"><i class="fa fa-columns"

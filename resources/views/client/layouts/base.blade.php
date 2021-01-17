@@ -16,7 +16,11 @@
     <link rel="stylesheet" href="{{asset('client/assets/mcustomscrollbar/jquery.mCustomScrollbar.min.css')}}">
     <link rel="stylesheet" href="{{asset('client/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('client/css/responsive.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css" integrity="sha512-xmGTNt20S0t62wHLmQec2DauG9T+owP9e6VU8GigI0anN7OXLip9i7IwEhelasml2osdxX71XcYm6BQunTQeQg==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
     <title>Docly</title>
+
+    @stack('css_after')
 </head>
 
 <body data-scroll-animation="true">
@@ -66,5 +70,16 @@
 <script src="{{asset('client/assets/wow/wow.min.js')}}"></script>
 <script src="{{asset('client/assets/mcustomscrollbar/jquery.mCustomScrollbar.concat.min.js')}}"></script>
 <script src="{{asset('client/js/main.js')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.js" integrity="sha512-VvWznBcyBJK71YKEKDMpZ0pCVxjNuKwApp4zLF3ul+CiflQi6aIJR+aZCP/qWsoFBA28avL5T5HA+RE+zrGQYg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput-angular.min.js" integrity="sha512-KT0oYlhnDf0XQfjuCS/QIw4sjTHdkefv8rOJY5HHdNEZ6AmOh1DW/ZdSqpipe+2AEXym5D0khNu95Mtmw9VNKg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js" integrity="sha512-eyHL1atYNycXNXZMDndxrDhNAegH2BDWt1TmkXJPoGf1WLlNYt08CSjkqF5lnCRmdm3IrkHid8s2jOUY4NIZVQ==" crossorigin="anonymous"></script>
+<script src="//cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+
+    <script>
+        $(document).ready( function () {
+            $('#myTable').DataTable();
+        } );
+    </script>
+@stack('js_after')
 </body>
 </html>

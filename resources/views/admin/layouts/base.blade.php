@@ -129,7 +129,8 @@
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
-    <script src="{{asset('admin/plugins/bower_components/jquery/dist/jquery.min.js')}}"></script>
+    {{-- <script src="{{asset('admin/plugins/bower_components/jquery/dist/jquery.min.js')}}"></script> --}}
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <!-- Bootstrap tether Core JavaScript -->
     <script src="{{asset('admin/plugins/bower_components/popper.js')}}/dist/umd/popper.min.js')}}"></script>
     <script src="{{asset('admin/bootstrap/dist/js/bootstrap.min.js')}}"></script>
@@ -147,6 +148,7 @@
             $('#myTable').DataTable();
         } );
     </script>
+    @stack('js_after')
 </body>
 
 </html>

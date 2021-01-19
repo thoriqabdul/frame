@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="d-flex align-items-center mb-5">
-    <h3 class="title">Naskah Pandding</h3>
+    <h3 class="title">Naskah Pending</h3>
     {{-- <a class="btn btn-primary ml-auto" href="{{route('cate.create')}}"><span><i class="zmdi zmdi-plus"></i>Tambah Publish</span></a> --}}
 </div>
 <table id="myTable" class="display">
@@ -10,7 +10,7 @@
     <thead>
         <tr>
             <th>Judul</th>
-            <th>publisher</th>
+            <th>Publisher</th>
             <th>Status</th>
             <th>Action</th>
         </tr>
@@ -23,7 +23,7 @@
         <tr>
             <td>{{$item->naskah->judul}}</td>
             <td>{{$item->category->publish->name}}</td>
-            <td><span class="text-primary">Panding</span></td>
+            <td><span class="text-primary">Pending</span></td>
             <td>
 
                 <a href="#" data-link="{{ route('nas.edit',['id'=>$item->id]) }}"  class="btn btn-primary try" id="try" title="{{$item->naskah->judul}}">

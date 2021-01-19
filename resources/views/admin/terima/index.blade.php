@@ -10,7 +10,7 @@
     <thead>
         <tr>
             <th>Judul</th>
-            <th>publisher</th>
+            <th>Publisher</th>
             <th>Status</th>
         </tr>
     </thead>
@@ -19,7 +19,7 @@
         <tr>
             <td>{{$item->naskah->judul}}</td>
             <td>{{$item->category->publish->name}}</td>
-            <td><span class="text-success">Di terima</span></td>
+            <td><span class="text-success">Diterima</span></td>
         </tr>
         @endforeach
     </tbody>

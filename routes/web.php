@@ -25,7 +25,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['prefix' => 'Admin','namespace'=>'Admin','middleware'=>['auth','is_admin']], function () {
-
+    Route::get('/User', 'HomeController@user')->name('home.user');
     Route::group(['prefix' => 'Publish'], function () {
         Route::get('/', 'UserController@index')->name('publish.index');
         Route::post('/store', 'UserController@store')->name('publish.store');

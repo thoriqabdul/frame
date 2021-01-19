@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Models\CategoryPublisher;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -33,5 +34,10 @@ class HomeController extends Controller
             })->get();
         }
         return view('admin.tolak.index',compact('tolak'));
+    }
+
+    public function user(){
+        $checkauth = User::where('role_id', 3)->get();
+        return view('admin.user', compact('checkauth'));
     }
 }

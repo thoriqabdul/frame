@@ -13,6 +13,10 @@
                     href="{{route('publish.index')}}" aria-expanded="false">
                     <i class="fa fa-user" aria-hidden="true"></i><span class="hide-menu">Publisher</span></a>
                 </li>
+                <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                    href="{{route('home.user')}}" aria-expanded="false">
+                    <i class="fa fa-user" aria-hidden="true"></i><span class="hide-menu">User</span></a>
+                </li>
                 @endif
                 <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                         href="{{route('cate.index')}}" aria-expanded="false">

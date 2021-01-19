@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="{{asset('client/css/responsive.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css" integrity="sha512-xmGTNt20S0t62wHLmQec2DauG9T+owP9e6VU8GigI0anN7OXLip9i7IwEhelasml2osdxX71XcYm6BQunTQeQg==" crossorigin="anonymous" />
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
-    <title>Docly</title>
+    <title>Kirim Naskah - Mizan</title>
 
     @stack('css_after')
 </head>
@@ -29,12 +29,9 @@
             <div class="round_spinner">
                 <div class="spinner"></div>
                 <div class="text">
-                    <img src="{{asset('client/img/spinner_logo.png')}}" alt="">
-                    <h4><span>Doc</span>ly</h4>
+                    <img src="{{asset('client/img/logo.png')}}" alt="">
                 </div>
             </div>
-            <h2 class="head">Did You Know?</h2>
-            <p></p>
         </div>
     </div>
     <div class="click_capture"></div>

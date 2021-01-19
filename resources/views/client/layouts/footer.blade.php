@@ -1,27 +1,15 @@
 <footer class="footer_area f_bg_color">
     <img class="p_absolute leaf" src="{{asset('client/img/v.svg')}}" alt="">
-    <img class="p_absolute f_man" src="{{asset('client/img/home_two/f_man.png')}}" alt="">
     <img class="p_absolute f_cloud" src="{{asset('client/img/home_two/cloud.png')}}" alt="">
     <img class="p_absolute f_email" src="{{asset('client/img/home_two/email-icon.png')}}" alt="">
     <img class="p_absolute f_email_two" src="{{asset('client/img/home_two/email-icon_two.png')}}" alt="">
-    <img class="p_absolute f_man_two" src="{{asset('client/img/home_two/man.png')}}" alt="">
     <div class="footer_top">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-sm-6">
                     <div class="f_widget subscribe_widget">
                         <a href="index.html" class="f_logo"><img src="{{asset('client/img/logo.png')}}" alt=""></a>
-                        <h4 class="c_head">Subscribe to our newsletter</h4>
-                        <form action="#" class="footer_subscribe_form">
-                            <input type="email" placeholder="Email" class="form-control">
-                            <button type="submit" class="s_btn">Send</button>
-                        </form>
-                        <ul class="list-unstyled f_social_icon">
-                            <li><a href="#"><i class="social_facebook"></i></a></li>
-                            <li><a href="#"><i class="social_twitter"></i></a></li>
-                            <li><a href="#"><i class="social_vimeo"></i></a></li>
-                            <li><a href="#"><i class="social_linkedin"></i></a></li>
-                        </ul>
+                        <p>Digital Publishing System adalah sebuah portal berbasis web yang bertujuan untuk menjembatani penerbit-penerbit Kompas Gramedia dengan pengarang. Dengan adanya Digital Publishing System, sistem penerimaan dan pengelolaan naskah akan menjadi lebih terorganisir. Selain itu, pengarang juga lebih mudah untuk menyalurkan naskahnya ke penerbit..</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
@@ -72,7 +60,7 @@
     </div>
     <div class="footer_bottom text-center">
         <div class="container">
-            <p>© 2020 All Rights Reserved by <a href="index.html">Docly</a></p>
+            <p>© 2020 All Rights Reserved by <a href="https://mizan.com">Mizan</a></p>
         </div>
     </div>
 </footer>

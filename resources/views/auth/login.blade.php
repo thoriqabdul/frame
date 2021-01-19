@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{{asset('client/assets/animation/animate.css')}}">
     <link rel="stylesheet" href="{{asset('client/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('client/css/responsive.css')}}">
-    <title>KbDoc</title>
+    <title>Daftar - Kirim Naskah Mizan</title>
 </head>
 
 <body data-scroll-animation="true">
@@ -23,19 +23,15 @@
             <div class="round_spinner">
                 <div class="spinner"></div>
                 <div class="text">
-                    <img src="{{asset('client/img/spinner_logo.png')}}" alt="">
-                    <h4><span>KbDoc</span></h4>
+                    <img src="{{asset('client/img/logo.png')}}" alt="">
                 </div>
             </div>
-            <h2 class="head">Did You Know?</h2>
-            <p></p>
         </div>
     </div>
     <div class="body_wrapper">
         <section class="signup_area">
             <div class="row ml-0 mr-0">
                 <div class="sign_left signin_left">
-                    <h2>We are design changers do what matters.</h2>
                     <img class="position-absolute top" src="{{asset('client/img/signup/top_ornamate.png')}}" alt="top">
                     <img class="position-absolute bottom" src="{{asset('client/img/signup/bottom_ornamate.png')}}" alt="bottom">
                     <img class="position-absolute middle" src="{{asset('client/img/signup/door.png')}}" alt="bottom">
@@ -44,7 +40,7 @@
                 <div class="sign_right signup_right">
                     <div class="sign_inner signup_inner">
                         <div class="text-center">
-                            <h3>Sign in to KbDoc platform</h3>
+                            <h3>Sign in</h3>
                             <p>Don’t have an account yet? <a href="{{ route('register') }}">Sign up here</a></p>
                             {{-- <a href="#" class="btn-google"><img src="{{asset('client/img/signup/gmail.png')}}" alt=""><span class="btn-text">Sign in with Gmail</span></a> --}}
                         </div>
@@ -55,7 +51,7 @@
                             @csrf
                             <div class="col-lg-12 form-group">
                                 <div class="small_text">Your email</div>
-                                <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="info@KbDoc.com" name="email" value="{{ old('email') }}">
+                                <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="username@gmail.com" name="email" value="{{ old('email') }}">
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

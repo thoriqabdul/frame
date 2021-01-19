@@ -11,7 +11,7 @@
                 @if (Auth::user()->role_id == 1)
                 <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                     href="{{route('publish.index')}}" aria-expanded="false">
-                    <i class="fa fa-user" aria-hidden="true"></i><span class="hide-menu">Publish</span></a>
+                    <i class="fa fa-user" aria-hidden="true"></i><span class="hide-menu">Publisher</span></a>
                 </li>
                 @endif
                 <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"

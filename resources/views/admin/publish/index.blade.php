@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="d-flex align-items-center mb-5">
-    <h3 class="title">Daftar Pengguna</h3>
+    <h3 class="title">Daftar Publisher</h3>
     <a class="btn btn-primary ml-auto" href="{{route('publish.create')}}"><span><i class="zmdi zmdi-plus"></i>Tambah Publish</span></a>
 </div>
 <table id="myTable" class="display">

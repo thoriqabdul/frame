@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="d-flex align-items-center mb-5">
-    <h3 class="title">Daftar Pengguna</h3>
+    <h3 class="title">Daftar Kategori</h3>
     <a class="btn btn-primary ml-auto" href="{{route('cate.create')}}"><span><i class="zmdi zmdi-plus"></i>Tambah Publish</span></a>
 </div>
 <table id="myTable" class="display">
@@ -10,7 +10,7 @@
     <thead>
         <tr>
             <th>Nama</th>
-            <th>Email</th>
+            <th>Kategori</th>
             <th>Action</th>
         </tr>
     </thead>

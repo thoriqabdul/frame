@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{{asset('client/assets/animation/animate.css')}}">
     <link rel="stylesheet" href="{{asset('client/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('client/css/responsive.css')}}">
-    <title>Daftar - Kirim Naskah Mizan</title>
+    <title>Login - Kirim Naskah Mizan</title>
 </head>
 
 <body data-scroll-animation="true">

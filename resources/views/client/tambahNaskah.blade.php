@@ -154,7 +154,7 @@
                                 <label for="staticEmail" class="col-sm-2 col-form-label">Upload File Naskah</label>
                                 <div class="col-sm-10">
                                     <label for="upload-photo" class="file-input btn btn-outline-info" >Browse File</label>
-                                    <input type="file" name="pdf" id="upload-photo" required accept="application/pdf"/>
+                                    <input type="file" name="pdf" id="upload-photo" data-parsley-max-file-size="1042" required accept="application/pdf"/>
                                 </div>
                             </div>
                         </div>
@@ -169,7 +169,7 @@
                             <div class="form-group row">
                                 <label for="staticEmail" class="col-sm-2 col-form-label">Tambah Pengarang</label>
                                 <div class="col-sm-5">
-                                  <input type="number" class="form-control w-25 d-inline" id="karang" value="" name="jumlah">
+                                  <input type="number" class="form-control w-25 d-inline" id="karang" value="" name="jumlah" required>
                                   <button type="button" class="btn btn-info btn-sm submit-pengarang" id="submit-pengarang">klik</button>
                                   <div class="penulis-tambah">
 
@@ -181,23 +181,23 @@
                                 <label for="staticEmail" class="col-sm-2 col-form-label">Segment Pembaca</label>
                                 <div class="col-sm-10">
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" name="segment[]" value="Semua" id="customCheck1">
+                                        <input type="checkbox" class="custom-control-input" name="segment[]" value="Semua" id="customCheck1" required>
                                         <label class="custom-control-label" for="customCheck1">Semua</label>
                                     </div>
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" name="segment[]" value="Dewasa" id="customCheck2">
+                                        <input type="checkbox" class="custom-control-input" name="segment[]" value="Dewasa" id="customCheck2" required>
                                         <label class="custom-control-label" for="customCheck2">Dewasa</label>
                                     </div>
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" name="segment[]" value="Orang Tua" id="customCheck3">
+                                        <input type="checkbox" class="custom-control-input" name="segment[]" value="Orang Tua" id="customCheck3" required>
                                         <label class="custom-control-label" for="customCheck3">Orang Tua</label>
                                     </div>
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" name="segment[]" value="Remaja" id="customCheck4">
+                                        <input type="checkbox" class="custom-control-input" name="segment[]" value="Remaja" id="customCheck4" required>
                                         <label class="custom-control-label" for="customCheck4">Remaja</label>
                                     </div>
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" name="segment[]" value="Anak - Anak" id="customCheck5">
+                                        <input type="checkbox" class="custom-control-input" name="segment[]" value="Anak - Anak" id="customCheck5" required>
                                         <label class="custom-control-label" for="customCheck5">Anak - Anak</label>
                                     </div>
                                 </div>
@@ -206,13 +206,13 @@
                             <div class="form-group row">
                                 <label for="staticEmail" class="col-sm-2 col-form-label">Selling Point</label>
                                 <div class="col-sm-10">
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="selling"></textarea>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="selling" required></textarea>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="staticEmail" class="col-sm-2 col-form-label">Keyword</label>
                                 <div class="col-sm-10">
-                                    <input type="text" data-role="tagsinput" name="tags" class="form-control">
+                                    <input type="text" data-role="tagsinput" name="tags" class="form-control" required>
                                 </div>
                             </div>
                         </div>
@@ -367,6 +367,22 @@ let category = (id, no)=>{
 
         navigateTo(0)
     // })
+
+    window.Parsley.addValidator('maxFileSize', {
+  validateString: function(_value, maxSize, parsleyInstance) {
+    if (!window.FormData) {
+      alert('You are making all developpers in the world cringe. Upgrade your browser!');
+      return true;
+    }
+    var files = parsleyInstance.$element[0].files;
+    return files.length != 1  || files[0].size <= maxSize * 1024;
+  },
+  requirementType: 'integer',
+  messages: {
+    en: 'This file should not be larger than %s Kb',
+    fr: 'Ce fichier est plus grand que %s Kb.'
+  }
+});
     
 </script>
     

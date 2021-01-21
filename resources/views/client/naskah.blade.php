@@ -70,11 +70,12 @@
                 </div>
                 <!-- /.answer-action --> --}}
 
-                <div class="page-content bg-white mb-3 p-3 justify-content-center">
+                <div class="page-content bg-white mb-3 p-3 ">
                     <div class="row">
-                        <div class="col-lg-3 col-4 text-center"> <a href="">Naskah Saya</a>   </div>
-                        <div class="col-lg-3 col-4 text-center"> <a href="">Naskah Diterima</a>  </div>
-                        <div class="col-lg-5 col-12 text-right">
+                        <div class="col-lg-2 col-4 text-left"> <a href="" class="thumbnail">Naskah Saya</a></div>
+                        <div class="col-lg-1 col-4 text-left"></div>
+                        <div class="col-lg-2 col-4 text-left"> <a href="" class="thumbnail">Naskah Diterima</a>  </div>
+                        <div class="col-lg-7 col-12 text-right">
                             <a href="{{route('homes.tambah')}}" class="btn btn-info btn-sm"> + Kirim Naskah</a>
                         </div>
                     </div>
@@ -121,19 +122,4 @@
         </div>
     </div>
 </section>
-
-<div class="call-to-action">
-    <div class="overlay-bg"></div>    
-    <div class="container">
-        <div class="action-content-wrapper">
-            <div class="action-title-wrap title-img">
-                <img src="{{asset('client/img/home_support/chat-smile.png')}}" alt="">
-                <h2 class="action-title">New to Communities?</h2>
-            </div>
-            <a href="#" class="action_btn">Join the community <i class="arrow_right"></i></a>
-        </div>
-        <!-- /.action-content-wrapper -->
-    </div>
-    <!-- /.container -->
-</div>
 @endsection

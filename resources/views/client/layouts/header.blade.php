@@ -26,8 +26,11 @@
                         <a class="nav-link dropdown-toggle" href="{{route('homes.index')}}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Dashboard
                         </a>
+                    @else
+                        <a class="nav-link dropdown-toggle" href="{{route('register')}}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Daftar
+                        </a>
                     @endif
-                    
                 </li>
             </ul>
             @if (Auth::check())
@@ -41,7 +44,7 @@
                 @csrf
             </form>
             @else
-            <a class="nav_btn" href="{{ route('login') }}"><i class="icon_profile"></i>Log In</a>
+            <a class="nav_btn" href="{{ route('login') }}"><i class="icon_profile"></i>Masuk</a>
             @endif
             
         </div>

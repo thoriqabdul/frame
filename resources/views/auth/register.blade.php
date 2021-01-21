@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{{asset('client/assets/animation/animate.css')}}">
     <link rel="stylesheet" href="{{asset('client/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('client/css/responsive.css')}}">
-    <title>Register - Kirim Naskah Mizan</title>
+    <title>Daftar - Kirim Naskah Mizan</title>
 </head>
 
 <body data-scroll-animation="true">
@@ -39,8 +39,8 @@
                 <div class="sign_right signup_right">
                     <div class="sign_inner signup_inner">
                         <div class="text-center">
-                            <h3>Create your account</h3>
-                            <p>Already have an account? <a href="{{route('login')}}">Sign in</a></p>
+                            <h3>Buat akun baru</h3>
+                            <p>Sudah memiliki akun? <a href="{{route('login')}}">Masuk</a></p>
                             {{-- <a href="#" class="btn-google"><img src="{{asset('client/img/signup/gmail.png')}}" alt=""><span class="btn-text">Sign up with Google</span></a> --}}
                         </div>
                         <div class="divider">
@@ -49,7 +49,7 @@
                         <form method="POST" action="{{ route('register') }}" class="row login_form">
                             @csrf
                             <div class="col-sm-12 form-group">
-                                <div class="small_text">Name</div>
+                                <div class="small_text">Nama</div>
                                 <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -62,7 +62,7 @@
                                 <input type="text" class="form-control" name="lname" id="lname" placeholder="Jewel">
                             </div> --}}
                             <div class="col-lg-12 form-group">
-                                <div class="small_text">Your email</div>
+                                <div class="small_text">Email</div>
                                 <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -83,14 +83,17 @@
                                 <div class="small_text">Confirm password</div>
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
-                            <div class="col-lg-12 form-group">
+                            <!-- <div class="col-lg-12 form-group">
                                 <div class="check_box">
                                     <input type="checkbox" value="None" id="squared2" name="check">
                                     <label class="l_text" for="squared2">I accept the <span>politic of confidentiality</span></label>
                                 </div>
+                            </div> -->
+                            <div class="col-lg-12 text-center">
+                                <button type="submit" class="btn action_btn thm_btn">Submit</button>
                             </div>
                             <div class="col-lg-12 text-center">
-                                <button type="submit" class="btn action_btn thm_btn">Create an account</button>
+                                <a class="btn btn-link" href="{{ url('/') }}">Kembali ke Halaman Awal</a>
                             </div>
                         </form>
                     </div>

@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{{asset('client/assets/animation/animate.css')}}">
     <link rel="stylesheet" href="{{asset('client/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('client/css/responsive.css')}}">
-    <title>Login - Kirim Naskah Mizan</title>
+    <title>Masuk - Kirim Naskah Mizan</title>
 </head>
 
 <body data-scroll-animation="true">
@@ -40,17 +40,17 @@
                 <div class="sign_right signup_right">
                     <div class="sign_inner signup_inner">
                         <div class="text-center">
-                            <h3>Sign in</h3>
-                            <p>Don’t have an account yet? <a href="{{ route('register') }}">Sign up here</a></p>
+                            <h3>Masuk</h3>
+                            <p>Belum memiliki akun? <a href="{{ route('register') }}">Daftar di sini</a></p>
                             {{-- <a href="#" class="btn-google"><img src="{{asset('client/img/signup/gmail.png')}}" alt=""><span class="btn-text">Sign in with Gmail</span></a> --}}
                         </div>
                         <div class="divider">
-                            <span class="or-text">or</span>
+                            <span class="or-text">atau</span>
                         </div>
                         <form method="POST" action="{{ route('login') }}" class="row login_form">
                             @csrf
                             <div class="col-lg-12 form-group">
-                                <div class="small_text">Your email</div>
+                                <div class="small_text">Email</div>
                                 <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="username@gmail.com" name="email" value="{{ old('email') }}">
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -59,7 +59,7 @@
                                 @enderror
                             </div>
                             <div class="col-lg-12 form-group">
-                                <div class="small_text">Confirm password</div>
+                                <div class="small_text">Password</div>
                                 <div class="confirm_password">
                                     <input id="confirm-password" name="password" type="password" class="form-control @error('password') is-invalid @enderror" placeholder="5+ characters required" autocomplete="off">
                                     {{-- <a href="#" class="forget_btn">Forgotten password?</a> --}}
@@ -72,7 +72,11 @@
                             </div>
 
                             <div class="col-lg-12 text-center">
-                                <button type="submit" class="btn action_btn thm_btn">Sign in</button>
+                                <button type="submit" class="btn action_btn thm_btn">Login</button>
+                            </div>
+
+                            <div class="col-lg-12 text-center">
+                                <a class="btn btn-link" href="{{ url('/') }}">Kembali ke Halaman Awal</a>
                             </div>
                         </form>
                     </div>

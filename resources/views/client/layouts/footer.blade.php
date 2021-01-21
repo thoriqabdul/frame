@@ -26,18 +26,18 @@
                     </div>
                 </div>
                 <div class="col-lg-1 col-sm-6">
-                    <div class="f_widget link_widget pl_70">
-                        <a href="#" class="btn-btn link">Home</a>
+                    <div class="f_widget link_widget">
+                        <a class="btn btn-link" href="{{ url('/') }}">Home</a>
                     </div>
                 </div>
                 <div class="col-lg-1 col-sm-6">
-                    <div class="f_widget link_widget pl_70">
-                        <a href="{{ route('register') }}" class="btn-btn link">Register</a>
+                    <div class="f_widget link_widget">
+                                <a class="btn btn-link" href="{{ route('login') }}">Daftar</a>
                     </div>
                 </div>
                 <div class="col-lg-1 col-sm-6">
-                    <div class="f_widget link_widget pl_70">
-                        <a href="{{ route('login') }}" class="btn-btn link">Login</a>
+                    <div class="f_widget link_widget">
+                        <a class="btn btn-link" href="{{ route('register') }}">Masuk</a>
                     </div>
                 </div>
             </div>

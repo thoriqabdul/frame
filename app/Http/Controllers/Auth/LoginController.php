@@ -42,6 +42,13 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
+    protected function validateLogin(Request $request)
+    {
+        $request->validate([
+            'captcha' => 'captcha'
+        ]);
+    }
+
     protected function authenticated(Request $request, $user)
     {
         if($user->role->name!='User'){

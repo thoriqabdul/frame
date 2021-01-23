@@ -70,6 +70,18 @@
                                     @enderror
                                 </div>
                             </div>
+                            <div class="col-lg-12 form-group  @error('captcha') is-invalid @enderror">
+                                <div class="col-12">
+                                    <span class="captcha-img"> {!! captcha_img() !!} </span> 
+                                    <button type="button" class="btn action_btn thm_btn btn-sm text-center refresh"><i class="icon_refresh"></i></button>
+                                </div>
+                                <input type="text" class="form-control mt-2 @error('captcha') is-invalid @enderror" name="captcha" required autofocus placeholder="isi Captcha">
+                                @error('captcha')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
 
                             <div class="col-lg-12 text-center">
                                 <button type="submit" class="btn action_btn thm_btn">Login</button>
@@ -98,6 +110,17 @@
     <script src="{{asset('client/assets/counterup/jquery.counterup.min.js')}}"></script>
     <script src="{{asset('client/assets/counterup/jquery.waypoints.min.js')}}"></script>
     <script src="{{asset('client/js/main.js')}}"></script>
+    <script>
+        $('.refresh').click(function(){
+            $.ajax({
+                type:'get',
+                url:'{{route('captcha')}}',
+                success:function(data){
+                    $('.captcha-img').html(data.captcha)
+                }
+            })
+        })
+    </script>
 </body>
 
 </html>

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Http\Models\Category;
 use App\Http\Models\Script;
+use App\Http\Models\Slider;
 use App\Http\Models\CategoryPublisher;
 use App\Http\Models\Other;
 use Illuminate\Support\Facades\Auth;
@@ -18,6 +19,11 @@ class HomeController extends Controller
     public function index(){
         $script = Script::where('user_id', Auth::user()->id)->get();
         return view('client.naskah', compact('script'));
+    }
+
+    public function landing(){
+        $data['slider'] = Slider::orderBy('id', 'DESC')->get();
+        return view('client.landing',compact('data'));
     }
 
     public function tambahNaskah(){
@@ -83,6 +89,10 @@ class HomeController extends Controller
         }
 
         return redirect()->route('homes.tambah');
+    }
+
+    public function captcha(){
+        return response()->json(['captcha'=>captcha_img()]);
     }
 }
 

@@ -132,8 +132,17 @@
                                             {{-- <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="info@KbDoc.com" name="email" value="{{ old('email') }}"> --}}
                                         </div>
                                     </div>
-                                </div>   
+                                </div>  
                             </div>
+                            <div class="col-12">
+                                <div class="row">
+                                    @foreach ($cate as $item)
+                                    <div class="col-lg-5 col-5 mb-3">
+                                        <img src="{{asset('storage/'.$item->img)}}" alt="" width="50" height="50"> <a href="{{$item->link}}"><span>{{$item->name}}</span></a>  
+                                    </div>
+                                    @endforeach
+                                </div>
+                            </div> 
                         </div>
                         <div class="form-section">
                             <div class="form-group row">
@@ -152,7 +161,7 @@
                                 <label for="staticEmail" class="col-sm-2 col-form-label">Upload File Naskah</label>
                                 <div class="col-sm-10">
                                     <label for="upload-photo" class="file-input btn btn-outline-info" >Browse File</label>
-                                    <input type="file" name="pdf" id="upload-photo" data-parsley-max-file-size="1042" required accept="application/pdf"/>
+                                    <input type="file" name="pdf" id="upload-photo" data-parsley-max-file-size="5000" required accept="application/pdf"/>
                                 </div>
                             </div>
                         </div>

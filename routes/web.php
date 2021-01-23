@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('client.landing');
-});
+Route::get('/', 'Client\HomeController@landing')->name('landing');
 // Route::get('/jelas', function () {
 //     return view('client.naskah');
 // });
@@ -23,6 +21,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/refresh', 'Client\HomeController@captcha')->name('captcha');
 
 Route::group(['prefix' => 'Admin','namespace'=>'Admin','middleware'=>['auth','is_admin']], function () {
     Route::get('/User', 'HomeController@user')->name('home.user');
@@ -34,6 +33,15 @@ Route::group(['prefix' => 'Admin','namespace'=>'Admin','middleware'=>['auth','is
         Route::get('/show/{id}', 'UserController@show')->name('publish.show');
         Route::put('/update/{id}', 'UserController@update')->name('publish.update');
         Route::delete('/delete/{id}', 'UserController@destroy')->name('publish.delete');
+    });
+    Route::group(['prefix' => 'Slider'], function () {
+        Route::get('/', 'SliderController@index')->name('slider.index');
+        Route::post('/store', 'SliderController@store')->name('slider.store');
+        Route::get('/edit/{id}/edit', 'SliderController@edit')->name('slider.edit');
+        Route::get('/create', 'SliderController@create')->name('slider.create');
+        Route::get('/show/{id}', 'SliderController@show')->name('slider.show');
+        Route::put('/update/{id}', 'SliderController@update')->name('slider.update');
+        Route::delete('/delete/{id}', 'SliderController@destroy')->name('slider.delete');
     });
 });
 

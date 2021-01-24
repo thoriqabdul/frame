@@ -64,8 +64,9 @@ Route::group(['prefix' => 'Admin','namespace'=>'Admin','middleware'=>['auth','is
         // Route::post('/store', 'NaskahController@store')->name('nas.store');
         Route::get('/edit/{id}/edit', 'NaskahController@edit')->name('nas.edit');
         // Route::get('/create', 'NaskahController@create')->name('nas.create');
-        // Route::get('/show/{id}', 'NaskahController@show')->name('nas.show');
+        Route::get('/show/{id}', 'NaskahController@show')->name('nas.show');
         Route::put('/update/{id}', 'NaskahController@update')->name('nas.update');
+        Route::get('/download/{id}', 'NaskahController@download')->name('nas.download');
         // Route::delete('/delete/{id}', 'NaskahController@destroy')->name('nas.delete');
     });
 });

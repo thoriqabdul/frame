@@ -29,6 +29,12 @@
                 <a href="#" data-link="{{ route('nas.edit',['id'=>$item->id]) }}"  class="btn btn-primary try" id="try" title="{{$item->naskah->judul}}">
                     Konfirmasi
                 </a>
+                <a href="{{ route('nas.download',['id'=>$item->id]) }}" data-link=""  class="btn btn-success">
+                    Download Naskah
+                </a>
+                <a href="{{ route('nas.show',['id'=>$item->id]) }}" data-link=""  class="btn btn-warning">
+                    Detail Naskah
+                </a>
                 {{-- <a href="{{ route('cate.edit',['id'=>$item->id]) }}" class="btn  btn-primary btn-flat btn-sm" ><i class="far fa-edit"></i></a>
                 <form action="{{route('cate.delete', ['id'=>$item->id])}}"
                     onsubmit="return confirm('Are you sure?')" class="d-inline"

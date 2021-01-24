@@ -25,8 +25,10 @@ class NaskahController extends BaseController
             })->get()
         );
     }
-    // public function index(){
-    //     $naskah = CategoryPublisher::where('status', 0)->get();
-    //     return view('admin.naskah.index',compact('naskah'));
-    // }
+
+    public function download($id){
+        $status = $this->getItem($id);
+        $naskah = public_path().'/storage/'.$status->naskah->pdf;
+        return response()->download($naskah);;
+    }
 }

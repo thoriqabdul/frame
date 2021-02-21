@@ -21,7 +21,13 @@ Route::get('/', 'Client\HomeController@landing')->name('landing');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/reset-password/user', 'Client\HomeController@sendReset')->name('home.sendReset');
 Route::get('/refresh', 'Client\HomeController@captcha')->name('captcha');
+
+Route::group(['middleware'=>['is_token']], function () {
+    Route::get('/resetPage/{token}', 'Client\HomeController@ressetPas')->name('home.ressetPas');
+    Route::post('/resetPage/{mail}', 'Client\HomeController@resetMail')->name('home.resetUpdate');
+});
 
 Route::group(['prefix' => 'Admin','namespace'=>'Admin','middleware'=>['auth','is_admin']], function () {
     Route::get('/User', 'HomeController@user')->name('home.user');

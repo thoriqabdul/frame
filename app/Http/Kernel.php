@@ -5,6 +5,7 @@ namespace App\Http;
 use App\Http\Middleware\CheckPublish;
 use App\Http\Middleware\CheckUser;
 use App\Http\Middleware\CheckAdmin;
+use App\Http\Middleware\CheckToken;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -69,5 +70,6 @@ class Kernel extends HttpKernel
         'is_admin'=> CheckAdmin::class,
         'is_publish'=> CheckPublish::class,
         'is_user'=> CheckUser::class,
+        'is_token'=> CheckToken::class,
     ];
 }

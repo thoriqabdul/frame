@@ -40,6 +40,11 @@
                 <div class="sign_right signup_right">
                     <div class="sign_inner signup_inner">
                         <div class="text-center">
+                            @if (session('success'))
+                                <div class="alert alert-success" role="alert">
+                                    {{ session('success') }}
+                                </div>
+                            @endif
                             <h3>Masuk</h3>
                             <p>Belum memiliki akun? <a href="{{ route('register') }}">Daftar di sini</a></p>
                             {{-- <a href="#" class="btn-google"><img src="{{asset('client/img/signup/gmail.png')}}" alt=""><span class="btn-text">Sign in with Gmail</span></a> --}}
@@ -87,6 +92,9 @@
                                 <button type="submit" class="btn action_btn thm_btn">Login</button>
                             </div>
 
+                            <div class="col-lg-12 text-center">
+                                <a class="btn btn-link" href="{{ route('password.request') }}">Lupa Password?</a>
+                            </div>
                             <div class="col-lg-12 text-center">
                                 <a class="btn btn-link" href="{{ url('/') }}">Kembali ke Halaman Awal</a>
                             </div>

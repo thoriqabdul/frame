@@ -2,6 +2,7 @@
 
 namespace App\Http\Models;
 
+use App\User;
 use Illuminate\Database\Eloquent\Model;
 
 class Script extends Model
@@ -19,5 +20,9 @@ class Script extends Model
     public function keyword()
     {
         return $this->hasMany(Keyword::class, 'naskah_id');
+    }
+
+    public function user(){
+        return $this->belongsTo(User::class, 'user_id'); 
     }
 }

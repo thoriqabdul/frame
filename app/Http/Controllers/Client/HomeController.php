@@ -109,7 +109,7 @@ class HomeController extends Controller
         Cookie::queue("tokens_mizan", json_encode($token), $minutes);
         Mail::send('client.resetEmail', ['dataMail' => $token], function ($message) use($mail) {
             $message->subject('Reset Email Mizan');
-            $message->from('thoriqabdul.at@gmail.com', 'Mizan Admin');
+            $message->from('info@mizanpublishing.com', 'Mizan Admin');
             $message->to($mail);
         });
         return back()->with('status', 'Silahkan Check Email Anda');

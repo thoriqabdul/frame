@@ -90,16 +90,16 @@
                 <div class="process_tab_shortcode">
                     <ul class="nav nav-tabs v_menu" id="myTabs" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" id="card-tab" data-toggle="tab" href="#card" role="tab" aria-controls="card" aria-selected="true"><span>1</span>Pilih Penerbit</a>
+                            <a class="nav-link active" id="step1" data-toggle="tab" href="#card" role="tab" aria-controls="card" aria-selected="true"><span>1</span>Pilih Penerbit</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" id="customer-tab" data-toggle="tab" href="#customer" role="tab" aria-controls="customer" aria-selected="false"><span>2</span>Unggah Naskah</a>
+                            <a class="nav-link" id="step2" data-toggle="tab" href="#customer" role="tab" aria-controls="customer" aria-selected="false"><span>2</span>Unggah Naskah</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="charge-tab" data-toggle="tab" href="#charge" role="tab" aria-controls="charge" aria-selected="false"><span>3</span>Isi Data Naskah</a>
+                            <a class="nav-link" id="step3" data-toggle="tab" href="#charge" role="tab" aria-controls="charge" aria-selected="false"><span>3</span>Isi Data Naskah</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="sub-tab" data-toggle="tab" href="#sub" role="tab" aria-controls="sub" aria-selected="false"><span>4</span>Selesai</a>
+                            <a class="nav-link" id="step4" data-toggle="tab" href="#sub" role="tab" aria-controls="sub" aria-selected="false"><span>4</span>Selesai</a>
                         </li>
                         {{-- <li class="nav-item">
                             <a class="nav-link" id="success-tab" data-toggle="tab" href="#success" role="tab" aria-controls="success" aria-selected="false"><span>5</span>Success!</a>
@@ -350,6 +350,14 @@ let category = (id, no)=>{
             var atTheEnd = index >= sections.length - 1;
             $('.form-navigator .lanjut').toggle(!atTheEnd);
             $('.form-navigator [type=submit]').toggle(atTheEnd);
+            if(index == 1){
+                    $('#step3').removeClass('active')
+                    $('#step2').addClass('active')
+                }else if(index == 0){
+                    $('#step2').removeClass('active')
+                }else if(index == 2){
+                    $('#step3').addClass('active')
+                }
         }
 
         function curIndex(){

@@ -30,12 +30,20 @@
     <div class="body_wrapper">
         <section class="signup_area signup_area_height">
             <div class="row ml-0 mr-0">
-                <div class="sign_left signup_left">
+                <div class="sign_left signin_left p-0">
+                    {{-- <img class="position-absolute top" src="{{asset('client/img/signup/top_ornamate.png')}}" alt="top"> --}}
+                    {{-- <img class="position-absolute bottom" src="{{asset('client/img/signup/bottom_ornamate.png')}}" alt="bottom"> --}}
+                    {{-- <img class="position-absolute middle" src="{{asset('client/img/signup/door.png')}}" alt="bottom"> --}}
+                    {{-- <div class="round"></div> --}}
+                    <img src="{{asset('client/img/mizan-login.jpg')}}" alt="" class="img-fluid" style="max-width: 100%;
+                    height: 100%;">
+                </div>
+                {{-- <div class="sign_left signup_left">
                     <img class="position-absolute top" src="{{asset('client/img/signup/top_ornamate.png')}}" alt="top">
                     <img class="position-absolute bottom" src="{{asset('client/img/signup/bottom_ornamate.png')}}" alt="bottom">
                     <img class="position-absolute middle wow fadeInRight" src="{{asset('client/img/signup/man_image.png')}}" alt="bottom">
                     <div class="round wow zoomIn" data-wow-delay="0.2s"></div>
-                </div>
+                </div> --}}
                 <div class="sign_right signup_right">
                     <div class="sign_inner signup_inner">
                         <div class="text-center">

@@ -13,6 +13,12 @@ class Script extends Model
     {
         return $this->hasMany(Other::class, 'naskah_id');
     }
+
+    public function publisher()
+    {
+        return $this->hasMany(CategoryPublisher::class, 'naskah_id');
+    }
+
     public function segment()
     {
         return $this->hasMany(Segment::class, 'naskah_id');

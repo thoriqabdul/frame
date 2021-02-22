@@ -91,7 +91,7 @@ class HomeController extends Controller
             $segmented->save();
         }
 
-        return redirect()->route('homes.tambah');
+        return redirect()->route('homes.index')->with('status', 'Naskah Berhasil Dikirim');
     }
 
     public function captcha(){

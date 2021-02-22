@@ -48,6 +48,11 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
+                @if (session('status'))
+                    <div class="alert alert-success" role="alert">
+                        {{ session('status') }}
+                    </div>
+                @endif
                 {{-- <div class="answer-action">
                     <div class="action-content">
                         <div class="image-wrap">
@@ -73,8 +78,7 @@
                 <div class="page-content bg-white mb-3 p-3 ">
                     <div class="row">
                         <div class="col-lg-2 col-4 text-left"> <a href="" class="thumbnail">Naskah Saya</a></div>
-                        <div class="col-lg-1 col-4 text-left"></div>
-                        <div class="col-lg-2 col-4 text-left"> <a href="" class="thumbnail">Naskah Diterima</a>  </div>
+                        <div class="col-lg-3 col-4 text-left"></div>
                         <div class="col-lg-7 col-12 text-right">
                             <a href="{{route('homes.tambah')}}" class="btn btn-info btn-sm"> + Kirim Naskah</a>
                         </div>
@@ -89,6 +93,7 @@
                             <tr>
                                 <th>Judul</th>
                                 <th>Pengarang</th>
+                                <th>Publisher - Status Naskah</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -97,6 +102,20 @@
                             <tr>
                                 <td>{{$item->judul}}</td>
                                 <td>{{$item->pengarang}}</td>
+                                <td>
+                                    <ol>
+                                        @foreach ($item->publisher as $i)
+                                            <li>{{$i->publisher}} - @if ($i->status == 0)
+                                                <span class="text-primary">Panding</span>
+                                            @elseif($i->status == 1)
+                                                <span class="text-success">Di Terima</span>
+                                            @else
+                                            <span class="text-danger">Di Tolak</span>
+                                            @endif</li>
+                                            
+                                        @endforeach
+                                    </ol>
+                                </td>
                                 <td>
                                     <a href="{{ route('cate.edit',['id'=>$item->id]) }}" class="btn  btn-primary btn-flat btn-sm" ><i class="far fa-eye"> Detail</i></a>
                                     {{-- <form action="{{route('cate.delete', ['id'=>$item->id])}}"

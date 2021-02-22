@@ -9306,7 +9306,7 @@ blockquote .author {
     background: #10b3d6;
 }
 .signin_left:before {
-    content: "";
+    /* content: ""; */
     left: 0;
     width: 100%;
     height: 100px;

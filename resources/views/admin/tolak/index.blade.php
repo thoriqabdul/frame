@@ -18,7 +18,7 @@
         @foreach ($tolak as $item)
         <tr>
             <td>{{$item->naskah->judul}}</td>
-            <td>{{$item->category->publish->name}}</td>
+            <td>{{$item->publisher}}</td>
             <td><span class="text-danger">Ditolak</span></td>
         </tr>
         @endforeach

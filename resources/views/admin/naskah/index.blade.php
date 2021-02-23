@@ -22,7 +22,7 @@
         @foreach ($checkauth as $item)
         <tr>
             <td>{{$item->naskah->judul}}</td>
-            <td>{{$item->category->publish->name}}</td>
+            <td>{{$item->publisher}}</td>
             <td><span class="text-primary">Pending</span></td>
             <td>
 

@@ -177,7 +177,7 @@
                                 <label for="staticEmail" class="col-sm-2 col-form-label">Tambah Pengarang</label>
                                 <div class="col-sm-5">
                                   <input type="number" class="form-control w-25 d-inline" id="karang" value="" name="jumlah" required>
-                                  <button type="button" class="btn btn-info btn-sm submit-pengarang" id="submit-pengarang">klik</button>
+                                  {{-- <button type="button" class="btn btn-info btn-sm submit-pengarang" id="submit-pengarang">klik</button> --}}
                                   <div class="penulis-tambah">
 
                                   </div>
@@ -262,7 +262,8 @@
 var penulis= $('.penulis-tambah');
 var jumlah = $('#karang');
 var namaPengarang = '<input type="text" class="form-control mt-2" id="" value="" name="pengarang_lain[]" required>';
-$('.submit-pengarang').click(function(){
+$(document).on('keyup', '#karang', function(){
+// $('.submit-pengarang').keyup(function(){
     $(penulis).empty();
     var result = $('#karang').val();
     if(result > 10){

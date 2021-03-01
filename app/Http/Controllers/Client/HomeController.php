@@ -54,13 +54,15 @@ class HomeController extends Controller
         $script->save();
 
         $pengarang = $r->pengarang_lain;
-
-        foreach($pengarang as $p){
-            $other = new Other();
-            $other->naskah_id = $script->id;
-            $other->nama = $p;
-            $other->save();
+        if(!empty($pengarang)){
+            foreach($pengarang as $p){
+                $other = new Other();
+                $other->naskah_id = $script->id;
+                $other->nama = $p;
+                $other->save();
+            }
         }
+        
 
         $category = $r->category_id;
 

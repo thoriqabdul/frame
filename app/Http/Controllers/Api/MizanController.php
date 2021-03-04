@@ -9,7 +9,7 @@ use App\Http\Models\Script;
 class MizanController extends Controller
 {
     public function CheckNaskah(){
-        $data = Script::with('other','keyword','segment','user')->get();
+        $data = Script::with('other','keyword','segment','user','publisher')->get();
         return response()->json([
             'status' => 200,
             'message' => 'success',

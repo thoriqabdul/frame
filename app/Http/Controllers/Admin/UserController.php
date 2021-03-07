@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\BaseController;
 use Illuminate\Http\Request;
 use App\User;
+use App\Http\Models\Role;
 use Illuminate\Database\Eloquent\Model;
 
 
@@ -15,12 +16,19 @@ class UserController extends BaseController
         $this->model = User::class;
         $this->prefix = "admin.publish";
         $this->routePath="publish.index";
-    }   
+    }
 
-    public function dataForIndex(): array
+    public function dataForCreate(): array
     {
         return array(
-            'publis'=> User::where('role_id',2)->get()
+            'role'=> Role::pluck('name','id')
+        );
+    }
+
+    public function dataForEdit($id): array
+    {
+        return array(
+            'role'=> Role::pluck('name','id')
         );
     }
 

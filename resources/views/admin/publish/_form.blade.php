@@ -8,6 +8,12 @@
                     {!! $errors->first('name', '<p class="help-block invalid-feedback">:message</p>') !!}
                     </div>
             </div>
+
+            <div class="form-group mb-4">
+                <label class="col-sm-12 p-0">Jabatan</label>
+                {!! Form::select('role_id',$data['role'],isset($model) ? $model->role_id : null ,$errors->has('role_id') ? ['class'=>'form-control is-invalid'] : ['class'=>'form-control p-0 border-0', 'placeholder' => 'pilih satu', 'required']) !!}
+                {!! $errors->first('role_id', '<p class="help-block invalid-feedback">:message</p>') !!}
+            </div> 
             <div class="form-group mb-4">
                 <label for="example-email" class="col-md-12 p-0">Email</label>
                 <div class="col-md-12 border-bottom p-0">
@@ -24,25 +30,6 @@
                 </div>
             </div>
 
-            <input type="hidden" name="role_id" value="2" id="">
-
-            <div class="form-group mb-4">
-                @if (isset($model->img))
-                    <img src="{{asset('storage/'.$model->img)}}" class="img-thumbnail" width="200" height="200">
-                @endif
-                <label class="col-md-12 p-0">Image</label>
-                <div class="col-md-12 border-bottom p-0">
-                    {!! Form::file('img',null ,$errors->has('img') ? ['class'=>'form-control is-invalid secondary p-0 border-0', 'placeholder' => 'Nama'] : ['class'=>'form-control', 'placeholder' => 'Image', 'required']) !!}
-                    {!! $errors->first('img', '<p class="help-block invalid-feedback">:message</p>') !!}
-                </div>
-            </div>
-            <div class="form-group mb-4">
-                <label class="col-md-12 p-0">Link</label>
-                <div class="col-md-12 border-bottom p-0">
-                    {!! Form::text('link',isset($model) ? $model->link: null ,$errors->has('link') ? ['class'=>'form-control is-invalid secondary p-0 border-0', 'placeholder' => 'Nama'] : ['class'=>'form-control p-0 border-0', 'placeholder' => 'Link', 'required']) !!}
-                    {!! $errors->first('link', '<p class="help-block invalid-feedback">:message</p>') !!}
-                </div>
-            </div>
             {{-- <div class="form-group mb-4">
                 <label class="col-md-12 p-0">Phone No</label>
                 <div class="col-md-12 border-bottom p-0">

@@ -16,8 +16,8 @@ class CheckAdmin
      */
     public function handle($request, Closure $next)
     {
-        if(Auth::user()->role->name=='Publish' || Auth::user()->role->name=='User'){
-            return redirect('/');
+        if(Auth::user()->role->name=='Finance' || Auth::user()->role->name=='Admin'){
+            return redirect('/Admin');
         }
         return $next($request);
     }

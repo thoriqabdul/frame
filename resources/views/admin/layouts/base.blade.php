@@ -143,11 +143,11 @@
     <script src="{{asset('admin/js/custom.js')}}"></script>
     <script src="//cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
 
-    <script>
+    {{-- <script>
         $(document).ready( function () {
             $('#myTable').DataTable();
         } );
-    </script>
+    </script> --}}
     @stack('js_after')
 </body>
 

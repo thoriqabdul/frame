@@ -16,7 +16,7 @@ class UserSeed extends Seeder
 
         $new_user = new \App\User;
         $new_user->name = "Super Admin";
-        $new_user->email = "Admin@gmail.com";
+        $new_user->email = "admin@gmail.com";
         $new_user->role_id = $role->id;
         $new_user->password =bcrypt('secret');
         $new_user->save();

@@ -17,11 +17,11 @@ class RoleSeed extends Seeder
         $new->save();
 
         $new = new Role();
-        $new->name = "Publish";
+        $new->name = "Admin";
         $new->save();
 
         $new = new Role();
-        $new->name = "User";
+        $new->name = "Finance";
         $new->save();
     }
 }

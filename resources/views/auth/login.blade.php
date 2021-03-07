@@ -1,4 +1,4 @@
-<!doctype html>
+{{-- <!doctype html>
 <html lang="en">
 
 <head>
@@ -31,12 +31,7 @@
     <div class="body_wrapper">
         <section class="signup_area">
             <div class="row ml-0 mr-0">
-                {{-- <div class="sign_left signin_left" style="background: url({{asset('client/img/mizan-login.jpg')}}); background-size:cover; background-position:center; height:auto;"> --}}
                 <div class="sign_left signin_left p-0">
-                    {{-- <img class="position-absolute top" src="{{asset('client/img/signup/top_ornamate.png')}}" alt="top"> --}}
-                    {{-- <img class="position-absolute bottom" src="{{asset('client/img/signup/bottom_ornamate.png')}}" alt="bottom"> --}}
-                    {{-- <img class="position-absolute middle" src="{{asset('client/img/signup/door.png')}}" alt="bottom"> --}}
-                    {{-- <div class="round"></div> --}}
                     <img src="{{asset('client/img/mizan-login.jpg')}}" alt="" class="img-fluid" style="max-width: 100%;
                     height: 100%;">
                 </div>
@@ -50,7 +45,6 @@
                             @endif
                             <h3>Masuk</h3>
                             <p>Belum memiliki akun? <a href="{{ route('register') }}">Daftar di sini</a></p>
-                            {{-- <a href="#" class="btn-google"><img src="{{asset('client/img/signup/gmail.png')}}" alt=""><span class="btn-text">Sign in with Gmail</span></a> --}}
                         </div>
                         <div class="divider">
                             <span class="or-text">atau</span>
@@ -70,25 +64,12 @@
                                 <div class="small_text">Password</div>
                                 <div class="confirm_password">
                                     <input id="confirm-password" name="password" type="password" class="form-control @error('password') is-invalid @enderror" placeholder="5+ characters required" autocomplete="off">
-                                    {{-- <a href="#" class="forget_btn">Forgotten password?</a> --}}
                                     @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                     @enderror
                                 </div>
-                            </div>
-                            <div class="col-lg-12 form-group  @error('captcha') is-invalid @enderror">
-                                <div class="col-12">
-                                    <span class="captcha-img"> {!! captcha_img() !!} </span> 
-                                    <button type="button" class="btn action_btn thm_btn btn-sm text-center refresh"><i class="icon_refresh"></i></button>
-                                </div>
-                                <input type="text" class="form-control mt-2 @error('captcha') is-invalid @enderror" name="captcha" required autofocus placeholder="isi Captcha">
-                                @error('captcha')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
                             </div>
 
                             <div class="col-lg-12 text-center">
@@ -121,17 +102,76 @@
     <script src="{{asset('client/assets/counterup/jquery.counterup.min.js')}}"></script>
     <script src="{{asset('client/assets/counterup/jquery.waypoints.min.js')}}"></script>
     <script src="{{asset('client/js/main.js')}}"></script>
-    <script>
-        $('.refresh').click(function(){
-            $.ajax({
-                type:'get',
-                url:'{{route('captcha')}}',
-                success:function(data){
-                    $('.captcha-img').html(data.captcha)
-                }
-            })
-        })
-    </script>
 </body>
 
+</html> --}}
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+   <!--Made with love by Mutiullah Samim -->
+   
+	<!--Bootsrap 4 CDN-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <!--Fontawesome CDN-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+	<!--Custom styles-->
+	<link rel="stylesheet" type="text/css" href="{{asset('admin/styles.css')}}">
+</head>
+<body>
+<div class="container">
+	<div class="d-flex justify-content-center h-100">
+		<div class="card">
+			<div class="card-header">
+				<h3>Sign In</h3>
+			</div>
+			<div class="card-body">
+				<form method="POST" action="{{ route('login') }}">
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+						<input type="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="username@gmail.com" name="email" value="{{ old('email') }}">
+                        @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+                        <input id="confirm-password" name="password" type="password" class="form-control @error('password') is-invalid @enderror" placeholder="5+ characters required" autocomplete="off">
+                        @error('password')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+					</div>
+					<div class="row align-items-center remember">
+						{{-- <input type="checkbox">Remember Me --}}
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Login" class="btn float-right login_btn">
+					</div>
+				</form>
+			</div>
+			<div class="card-footer text-center">
+				<div class="d-flex justify-content-center links">
+					Ucapkan Bismilah sebelum memulai aktifitas anda
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
 </html>

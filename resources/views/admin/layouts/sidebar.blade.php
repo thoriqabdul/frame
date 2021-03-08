@@ -13,9 +13,24 @@
                     href="{{route('publish.index')}}" aria-expanded="false">
                     <i class="fa fa-user" aria-hidden="true"></i><span class="hide-menu">Anggota</span></a>
                 </li>
-                <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                    href="{{route('home.user')}}" aria-expanded="false">
-                    <i class="fa fa-user" aria-hidden="true"></i><span class="hide-menu">Client</span></a>
+                <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark sidebar-link"
+                    href="javascript:void(0)" aria-expanded="false">
+                    <i class="fa fa-user" aria-hidden="true"></i><span class="hide-menu">Master Data</span></a>
+                    <ul aria-expanded="false" class="collapse first-level">
+                        <li class="sidebar-item">
+                            <a href="{{route('home.user')}}" class="sidebar-link">
+                                <i class="mdi mdi-adjust"></i>
+                                <span class="hide-menu"> Client </span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                <i class="mdi mdi-adjust"></i>
+                                <span class="hide-menu"> Inventory </span>
+                            </a>
+                        </li>
+
+                    </ul>
                 </li>
                 {{-- <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                     href="{{route('slider.index')}}" aria-expanded="false"><i class="fa fa-globe"

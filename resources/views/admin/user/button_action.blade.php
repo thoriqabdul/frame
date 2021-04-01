@@ -1,5 +1,5 @@
-<a href="{{ route('publish.edit',$id) }}" class="btn  btn-primary btn-flat btn-sm" ><i class="far fa-edit"></i></a>
-<form action="{{route('publish.delete', ['id'=>$id])}}"
+<a href="{{ route('user.edit',$id) }}" class="btn  btn-primary btn-flat btn-sm" ><i class="far fa-edit"></i></a>
+<form action="{{route('user.delete', ['id'=>$id])}}"
       onsubmit="return confirm('Are you sure?')" class="d-inline"
       method="POST">
     @csrf

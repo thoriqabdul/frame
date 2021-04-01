@@ -10,10 +10,10 @@
                             aria-hidden="true"></i><span class="hide-menu">Dashboard</span></a></li>
                 {{-- @if (Auth::user()->role_id == 1) --}}
                 <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                    href="{{route('publish.index')}}" aria-expanded="false">
+                    href="{{route('user.index')}}" aria-expanded="false">
                     <i class="fa fa-user" aria-hidden="true"></i><span class="hide-menu">Anggota</span></a>
                 </li>
-                <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark sidebar-link"
+                {{-- <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark sidebar-link"
                     href="javascript:void(0)" aria-expanded="false">
                     <i class="fa fa-user" aria-hidden="true"></i><span class="hide-menu">Master Data</span></a>
                     <ul aria-expanded="false" class="collapse first-level">
@@ -31,7 +31,7 @@
                         </li>
 
                     </ul>
-                </li>
+                </li> --}}
                 {{-- <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                     href="{{route('slider.index')}}" aria-expanded="false"><i class="fa fa-globe"
                         aria-hidden="true"></i><span class="hide-menu">Slider</span></a></li>

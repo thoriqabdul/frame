@@ -2,8 +2,8 @@
 
 @section('content')
     
-{!! Form::open(['route' => ["publish.update",$model->id], 'method' => 'put','autocomplete'=>"false","enctype"=>'multipart/form-data']) !!}
-@include('admin.publish._form')
+{!! Form::open(['route' => ["publiusersh.update",$model->id], 'method' => 'put','autocomplete'=>"false","enctype"=>'multipart/form-data']) !!}
+@include('admin.user._form')
 {!! Form::close() !!}
 
 

@@ -26,16 +26,16 @@ Route::get('/refresh', 'Client\HomeController@captcha')->name('captcha');
 
 Route::group(['prefix' => 'Admin','namespace'=>'Admin','middleware'=>['auth','is_admin']], function () {
     Route::get('/', 'HomeController@index')->name('home.index');
-    Route::get('/User', 'HomeController@user')->name('home.user');
-    Route::group(['prefix' => 'Publish'], function () {
-        Route::get('/', 'UserController@index')->name('publish.index');
-        Route::post('/store', 'UserController@store')->name('publish.store');
-        Route::get('/data', 'UserController@data')->name('publish.data');
-        Route::get('/edit/{id}/edit', 'UserController@edit')->name('publish.edit');
-        Route::get('/create', 'UserController@create')->name('publish.create');
-        Route::get('/show/{id}', 'UserController@show')->name('publish.show');
-        Route::put('/update/{id}', 'UserController@update')->name('publish.update');
-        Route::delete('/delete/{id}', 'UserController@destroy')->name('publish.delete');
+    // Route::get('/User', 'HomeController@user')->name('home.user');
+    Route::group(['prefix' => 'User'], function () {
+        Route::get('/', 'UserController@index')->name('user.index');
+        Route::post('/store', 'UserController@store')->name('user.store');
+        Route::get('/data', 'UserController@data')->name('user.data');
+        Route::get('/edit/{id}/edit', 'UserController@edit')->name('user.edit');
+        Route::get('/create', 'UserController@create')->name('user.create');
+        Route::get('/show/{id}', 'UserController@show')->name('user.show');
+        Route::put('/update/{id}', 'UserController@update')->name('user.update');
+        Route::delete('/delete/{id}', 'UserController@destroy')->name('user.delete');
     });
 });
 

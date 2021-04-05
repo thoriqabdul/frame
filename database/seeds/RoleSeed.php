@@ -15,13 +15,5 @@ class RoleSeed extends Seeder
         $new = new Role();
         $new->name = "Super Admin";
         $new->save();
-
-        $new = new Role();
-        $new->name = "Admin";
-        $new->save();
-
-        $new = new Role();
-        $new->name = "Finance";
-        $new->save();
     }
 }

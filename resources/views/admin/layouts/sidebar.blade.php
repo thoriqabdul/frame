@@ -13,6 +13,10 @@
                     href="{{route('user.index')}}" aria-expanded="false">
                     <i class="fa fa-user" aria-hidden="true"></i><span class="hide-menu">Anggota</span></a>
                 </li>
+                <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                    href="{{route('setting.index')}}" aria-expanded="false">
+                    <i class="ti-settings" aria-hidden="true"></i><span class="hide-menu">Setting</span></a>
+                </li>
                 {{-- <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark sidebar-link"
                     href="javascript:void(0)" aria-expanded="false">
                     <i class="fa fa-user" aria-hidden="true"></i><span class="hide-menu">Master Data</span></a>
@@ -62,7 +66,7 @@
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                 @csrf
                             </form>
-                
+
             </ul>
 
         </nav>

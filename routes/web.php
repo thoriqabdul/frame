@@ -25,7 +25,7 @@ Auth::routes();
 Route::post('/reset-password/user', 'Client\HomeController@sendReset')->name('home.sendReset');
 Route::get('/refresh', 'Client\HomeController@captcha')->name('captcha');
 
-Route::group(['prefix' => 'Admin','namespace'=>'Admin','middleware'=>['auth','is_admin']], function () {
+Route::group(['prefix' => 'Dashboard','namespace'=>'Admin','middleware'=>['auth']], function () {
     Route::get('/', 'HomeController@index')->name('home.index');
     // Route::get('/User', 'HomeController@user')->name('home.user');
     Route::group(['prefix' => 'User'], function () {
@@ -37,5 +37,9 @@ Route::group(['prefix' => 'Admin','namespace'=>'Admin','middleware'=>['auth','is
         Route::get('/show/{id}', 'UserController@show')->name('user.show');
         Route::put('/update/{id}', 'UserController@update')->name('user.update');
         Route::delete('/delete/{id}', 'UserController@destroy')->name('user.delete');
+    });
+    Route::group(['prefix' => 'setting'], function () {
+        Route::get('/', 'SettingController@index')->name('setting.index');
+        Route::post('/store', 'SettingController@storee')->name('setting.store');
     });
 });

@@ -52,7 +52,7 @@ class LoginController extends Controller
     protected function authenticated(Request $request, $user)
     {
         // if($user->role->name!='User'){
-            return redirect('/Admin');
+            return redirect('/Dashboard');
         // }else{
         //     return redirect('/naskah');
         // }

@@ -18,6 +18,7 @@
     <!-- Custom CSS -->
    <link href="{{asset('admin/css/style.min.css')}}" rel="stylesheet">
    <link rel="stylesheet" href="//cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.css" integrity="sha512-In/+MILhf6UMDJU4ZhDL0R0fEpsp4D3Le23m6+ujDWXwl3whwpucJG1PEmI3B07nyJx+875ccs+yX2CqQJUxUw==" crossorigin="anonymous" />
     <!-- HTML5 Shim and Respond.js')}} IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js')}} doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -51,7 +52,7 @@
         <!-- ============================================================== -->
         <!-- Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->
-        
+
         @include('admin.layouts.sidebar')
 
 
@@ -142,7 +143,7 @@
     <!--Custom JavaScript -->
     <script src="{{asset('admin/js/custom.js')}}"></script>
     <script src="//cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.min.js" integrity="sha512-8QFTrG0oeOiyWo/VM9Y8kgxdlCryqhIxVeRpWSezdRRAvarxVtwLnGroJgnVW9/XBRduxO/z1GblzPrMQoeuew==" crossorigin="anonymous"></script>
     {{-- <script>
         $(document).ready( function () {
             $('#myTable').DataTable();
